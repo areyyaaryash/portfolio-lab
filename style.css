@@ -338,36 +338,36 @@ main {
         padding:0.8rem 2rem;
     }
 }
-/* ================= LOGO ================= */
+
 .logo {
     font-size: 2.6rem;
     font-weight: 700;
     letter-spacing: 0.08em;
 
-    /* gradient text */
+    
     background: linear-gradient(90deg, #ffffff, #a855f7, #7f42a7, #ffffff);
     background-size: 200% auto;
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    /* smooth animations */
+    
     animation: logoFlow 10s linear infinite, glowPulse 4s ease-in-out infinite;
 
-    /* layout */
+   
     position: relative;
     display: inline-block;
     overflow: hidden;
     cursor: pointer;
 }
 
-/* ================= GRADIENT FLOW ================= */
+
 @keyframes logoFlow {
     0% { background-position: 0% center; }
     100% { background-position: 200% center; }
 }
 
-/* ================= SOFT GLOW ================= */
+
 @keyframes glowPulse {
     0%, 100% {
         text-shadow: 0 0 8px rgba(168, 85, 247, 0.25);
@@ -377,7 +377,7 @@ main {
     }
 }
 
-/* ================= MAGIC SHINE LAYER ================= */
+
 .logo::after {
     content: "";
     position: absolute;
@@ -394,7 +394,7 @@ main {
         rgba(168,85,247,0.4),
         transparent
     );
-    border-radius: 50px; /* 👈 THIS makes it soft & rounded */
+    border-radius: 50px; 
 
     filter: blur(8px); 
 
@@ -402,12 +402,12 @@ main {
     opacity: 0;
 }
 
-/* ================= HOVER TRIGGER ================= */
+
 .logo:hover::after {
     animation: magicSweep 1.2s ease forwards;
 }
 
-/* ================= SWEEP ANIMATION ================= */
+
 @keyframes magicSweep {
     0% {
         left: -120%;
@@ -426,14 +426,14 @@ main {
     }
 }
 
-/* ===== NAV CONTAINER (no border, just spacing) ===== */
+
 .nav-glass {
     display: flex;
     gap: 1.2rem;
     align-items: center;
 }
 
-/* ===== EACH NAV ITEM ===== */
+
 .nav-glass a {
     position: relative;
     padding: 0.5rem 1.2rem;
@@ -445,7 +445,7 @@ main {
 
     border-radius: 999px;
 
-    /* liquid glass */
+    
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -489,7 +489,7 @@ nav a {
     opacity: 0;
 }
 
-/* only on hover */
+
 .nav-glass a:hover::before {
     animation: navShine 0.8s ease;
 }
