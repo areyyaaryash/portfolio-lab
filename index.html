@@ -14,6 +14,9 @@
 
     <div class="container">
         <header>
+            <div class="menu-toggle">
+                ≡
+            </div>
             <h1 class="logo">Y<span>.</span>C<span>.</span></h1>
             <nav class="nav-glass">
                 <a href="#">CREATIONS</a>
@@ -55,7 +58,20 @@
     </div>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.72/build/spline-viewer.js"></script>
 
-
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        </script>
+        <div class="mobile-nav">
+            <a href="#">Work</a>
+            <a href="#">About</a>
+            <a href="#">Process</a>
+            <a href="#">Contact</a>
+        </div>
 </body>
 
 </html>
